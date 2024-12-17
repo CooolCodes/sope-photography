@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  display: block;
+  width: 100%;
+}
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: transparent;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+:root {
+  --font: "Open Sans", sans-serif;
+  --Light_gray: #cfcfcf;
+  --White: hsl(0, 0%, 100%);
+  --Black: rgb(0, 0, 0, 75%);
+  --Drak_gray: #818181;
+}
+body {
+  font-family: var(--font);
+  background-color: var(--Light_gray);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/IMG_001.jpg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container {
+  width: 100%;
+  max-width: 150rem;
+  margin: auto;
+  padding: 2rem;
+}
+.icon {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Mobile Nav menu */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--Light_gray);
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.menu-ig {
+  height: 6rem;
+  width: 6rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.desktop-nav {
+  display: none;
+}
+.main-body {
+  min-height: 100%;
+}
+.brand-name {
+  font-size: 4.2rem;
+  font-weight: bold;
+  line-height: 4.5rem;
+  color: var(--White);
+  margin-top: 15rem;
+  text-align: center;
+}
+.brand-motto {
+  color: var(--White);
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footer-items {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+.footer_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  height: 6rem;
+  width: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .icon {
+    height: 3rem;
+    width: 3rem;
+  }
+  .footer-items {
+    gap: 3rem;
+  }
+  .footer_links {
+    gap: 2.5rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+  span {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .menu-ig {
+    height: 3rem;
+    width: 3rem;
+  }
+  .footer-items {
+    gap: 3rem;
+  }
+  .footer_links {
+    gap: 2.5rem;
+    font-size: 2rem;
+  }
+}
